@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alertforww"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+	<uses-permission android:name="android.permission.RECEIVE_SMS"/>  
+    <uses-permission android:name="android.permission.READ_SMS"/>  
+    <uses-permission android:name="android.permission.WAKE_LOCK"/> 
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:name="alertForWw.AlarmApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity android:name="alertForWw.TimingAlarmActivity" android:screenOrientation="unspecified">
+        </activity>
+        <activity android:name="alertForWw.TimingPerformActivity" android:screenOrientation="unspecified">
+        </activity>
+        <activity android:name="alertForWw.SleepAlarmActivity" android:screenOrientation="unspecified">
+        </activity>
+        <activity android:name="alertForWw.SleepPerformActivity" android:screenOrientation="unspecified">
+        </activity>
+        <activity android:name="alertForWw.AlarmListActivity" android:screenOrientation="unspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name="alertForWw.TimingAlarmReceiver" android:process=":remote"/>
+        <receiver android:name="alertForWw.SleepAlarmReceiver" android:process=":remote"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/currTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/sleepalarm_hour_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="4"
+            android:gravity="center"
+            android:hint="@string/input_hour_hint"
+            android:inputType="number" />
+
+        <NumberPicker
+            android:id="@+id/sleepalarm_hour_numberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/colon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/colon" />
+
+        <NumberPicker
+            android:id="@+id/sleepalarm_minute_numberPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/sleepalarm_minute_editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="4"
+            android:gravity="center"
+            android:hint="@string/input_minute_hint"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingBottom="@dimen/option_padding_tb"
+        android:paddingLeft="@dimen/option_padding_lr"
+        android:paddingRight="@dimen/option_padding_lr"
+        android:paddingTop="@dimen/option_padding_tb" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center|left"
+            android:text="@string/sleepTime_label"
+            android:textSize="@dimen/option_size" />
+
+        <TextView
+            android:id="@+id/sleepalarm_sleepTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center|right"
+            android:textSize="@dimen/option_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingBottom="@dimen/option_padding_tb"
+        android:paddingLeft="@dimen/option_padding_lr"
+        android:paddingRight="@dimen/option_padding_lr"
+        android:paddingTop="@dimen/option_padding_tb" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center|left"
+            android:text="@string/getupTime_label"
+            android:textSize="@dimen/option_size" />
+
+        <TextView
+            android:id="@+id/sleepalarm_getupTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center|right"
+            android:textSize="@dimen/option_size" />
+
+    </LinearLayout>
+
+    <alertForWw.OptionView.ShakeOptionView
+        android:id="@+id/shakeOptionView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/option_padding_tb"
+        android:paddingLeft="@dimen/option_padding_lr"
+        android:paddingRight="@dimen/option_padding_lr"
+        android:paddingTop="@dimen/option_padding_tb" >
+
+        <TextView
+            android:id="@+id/vibrator_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/vibrator_label"
+            android:textSize="@dimen/option_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+	        <CheckBox
+	            android:id="@+id/vibrator"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </alertForWw.OptionView.ShakeOptionView>
+    
+    <alertForWw.OptionView.RemarkOptionView
+        android:id="@+id/remarkOptionView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/option_padding_tb"
+        android:paddingLeft="@dimen/option_padding_lr"
+        android:paddingRight="@dimen/option_padding_lr"
+        android:paddingTop="@dimen/option_padding_tb" >
+
+        <TextView
+            android:id="@+id/remark_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remark_label"
+            android:textSize="@dimen/option_size" />
+
+        <TextView
+            android:id="@+id/remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textSize="@dimen/option_size" />
+
+    </alertForWw.OptionView.RemarkOptionView>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/sleepalarm_sleep_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sleep" />
+    </LinearLayout>
+
+</LinearLayout>
